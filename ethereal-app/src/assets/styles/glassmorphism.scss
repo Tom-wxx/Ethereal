@@ -1,0 +1,24 @@
+@mixin glass-effect($opacity: 0.6) {
+  background: rgba(255, 255, 255, $opacity);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+}
+
+@mixin glass-card {
+  @include glass-effect(0.6);
+  border-radius: 24px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+@mixin glass-nav {
+  @include glass-effect(0.8);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+@mixin primary-gradient {
+  background: linear-gradient(135deg, #FF4D6D, #ff7386);
+}
+
+@mixin ambient-shadow {
+  box-shadow: 0 12px 40px rgba(44, 47, 48, 0.06);
+}

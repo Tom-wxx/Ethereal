@@ -1,0 +1,1 @@
+import{ap as n,r as a}from"./index-8N3KctAq.js";import{r as t}from"./request-CqCTZIjn.js";function f(){return t.get("/user/profile")}function i(e){return t.put("/user/profile",e)}const p=n("user",()=>{const e=a(null);async function r(){e.value=await f()}async function o(u){await i(u),await r()}return{userInfo:e,fetchProfile:r,updateProfile:o}});export{p as u};

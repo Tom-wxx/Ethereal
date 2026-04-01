@@ -1,0 +1,19 @@
+package com.ethereal.module.moment.entity;
+
+import com.baomidou.mybatisplus.annotation.*;
+import lombok.Data;
+
+import java.time.LocalDateTime;
+
+@Data
+@TableName("t_moment_like")
+public class MomentLike {
+
+    @TableId(type = IdType.AUTO)
+    private Long id;
+    private Long momentId;
+    private Long userId;
+
+    @TableField(fill = FieldFill.INSERT)
+    private LocalDateTime createdAt;
+}

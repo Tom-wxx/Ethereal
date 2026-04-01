@@ -1,0 +1,1 @@
+import{_ as t,o as c,c as o,b as a,a3 as s}from"./index-CqmUWviL.js";/* empty css             */const _={},n={class:"image-audit"};function r(i,d){const e=s;return c(),o("div",n,[a(e,{description:"暂无待审核图片"})])}const f=t(_,[["render",r],["__scopeId","data-v-52bef311"]]);export{f as default};

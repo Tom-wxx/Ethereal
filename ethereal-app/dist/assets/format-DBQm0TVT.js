@@ -1,0 +1,1 @@
+function i(t){return t<1e3?`${Math.round(t)}m`:`${(t/1e3).toFixed(1)}km`}function u(t){const e=Date.now(),a=new Date(t).getTime(),f=e-a,n=Math.floor(f/6e4);if(n<1)return"刚刚";if(n<60)return`${n}分钟前`;const o=Math.floor(n/60);if(o<24)return`${o}小时前`;const r=Math.floor(o/24);return r<7?`${r}天前`:new Date(t).toLocaleDateString("zh-CN")}export{u as a,i as f};

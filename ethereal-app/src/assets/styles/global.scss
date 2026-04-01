@@ -1,0 +1,31 @@
+@use './variables' as *;
+@use './reset';
+@use './glassmorphism';
+
+body {
+  background-color: $surface;
+  color: $on-surface;
+  font-family: 'Be Vietnam Pro', 'PingFang SC', -apple-system, BlinkMacSystemFont, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.page-container {
+  min-height: 100vh;
+  padding-bottom: 60px;
+}
+
+.gradient-btn {
+  background: linear-gradient(135deg, $primary, $primary-container);
+  color: #fff;
+  border: none;
+  border-radius: $radius-xl;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+
+.section-title {
+  font-family: 'Plus Jakarta Sans', 'PingFang SC', sans-serif;
+  font-weight: 700;
+  color: $on-surface;
+}

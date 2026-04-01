@@ -1,0 +1,41 @@
+// 品牌色
+$primary-color: #FF4D6D;
+$primary-light: #FF758F;
+$primary-dark: #E63956;
+$primary-gradient: linear-gradient(135deg, #FF4D6D, #FF758F);
+
+// 侧边栏
+$sidebar-bg: #1E1E2D;
+$sidebar-width: 220px;
+$sidebar-collapsed-width: 64px;
+$sidebar-text-color: #A2A3B7;
+$sidebar-active-text: #FFFFFF;
+$sidebar-active-bg: rgba(255, 77, 109, 0.15);
+
+// 顶栏
+$header-height: 56px;
+$header-bg: #FFFFFF;
+
+// 背景
+$page-bg: #F2F3F8;
+$card-bg: #FFFFFF;
+
+// 文字
+$text-primary: #1E1E2D;
+$text-regular: #606266;
+$text-secondary: #909399;
+$text-placeholder: #C0C4CC;
+
+// 边框 / 阴影
+$border-color: #E4E7ED;
+$card-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+
+// 圆角
+$border-radius: 8px;
+$border-radius-sm: 4px;
+
+// 状态色
+$success-color: #67C23A;
+$warning-color: #E6A23C;
+$danger-color: #F56C6C;
+$info-color: #909399;
