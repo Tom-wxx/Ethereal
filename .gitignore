@@ -1,0 +1,26 @@
+# Maven
+ethereal-server/target/
+ethereal-server/.mvn/
+*.jar
+*.war
+
+# Node
+ethereal-app/node_modules/
+ethereal-admin/node_modules/
+ethereal-app/dist/
+ethereal-admin/dist/
+
+# IDE
+.idea/
+*.iml
+.vscode/
+*.suo
+*.user
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+logs/
