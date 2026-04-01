@@ -12,7 +12,19 @@
       "Bash(mvn spring-boot:run -q)",
       "Bash(npm run:*)",
       "Bash(mvn spring-boot:run)",
-      "Bash(gh auth:*)"
+      "Bash(gh auth:*)",
+      "Bash(gh repo:*)",
+      "Skill(update-config)",
+      "Bash(node:*)",
+      "Bash(echo \"PID=$!\")",
+      "Bash(grep -v \"^$\")",
+      "Bash(netstat -ano)",
+      "Bash(xargs -r taskkill /PID /F)",
+      "Bash(taskkill:*)",
+      "Bash(cmd:*)",
+      "Bash(powershell -Command \"Stop-Process -Id 64608 -Force\")",
+      "Bash(echo \"启动中 PID=$!\")",
+      "Bash(curl -s -X POST http://localhost:8080/api/auth/sms-code -H 'Content-Type: application/json' -d '{\"phone\":\"13900009999\"}')"
     ]
   }
 }

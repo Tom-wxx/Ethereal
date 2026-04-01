@@ -35,6 +35,25 @@ public class ChatController {
         return R.ok(chatService.getMessages(conversationId, size));
     }
 
+    @Operation(summary = "获取或创建会话")
+    @PostMapping("/conversations")
+    public R<Map<String, Object>> getOrCreateConversation(@RequestBody Map<String, Object> body) {
+        Long userId = StpUtil.getLoginIdAsLong();
+        Long targetUserId = Long.parseLong(body.get("targetUserId").toString());
+        var conv = chatService.getOrCreateConversation(userId, targetUserId);
+        return R.ok(Map.of("id", conv.getId()));
+    }
+
+    @Operation(summary = "发送消息")
+    @PostMapping("/messages")
+    public R<ChatMessage> sendMessage(@RequestBody Map<String, Object> body) {
+        Long userId = StpUtil.getLoginIdAsLong();
+        Long conversationId = Long.parseLong(body.get("conversationId").toString());
+        String content = (String) body.get("content");
+        Integer msgType = body.get("msgType") != null ? Integer.parseInt(body.get("msgType").toString()) : 1;
+        return R.ok(chatService.sendMessage(conversationId, userId, content, msgType));
+    }
+
     @Operation(summary = "标记已读")
     @PostMapping("/conversations/{conversationId}/read")
     public R<Void> markRead(@PathVariable Long conversationId) {
