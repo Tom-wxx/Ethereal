@@ -6,7 +6,7 @@
         "hooks": [
           {
             "type": "command",
-            "command": "input=$(cat); cmd=$(echo \"$input\" | jq -r '.tool_input.command // \"\"'); exit_code=$(echo \"$input\" | jq -r '.tool_response.exitCode // 0'); if echo \"$cmd\" | grep -qE 'mvn (compile|test|package|install)' && [ \"$exit_code\" = \"0\" ]; then cd D:/allCode/test/getFrients && git add -A && git diff --cached --quiet || (git commit -m \"Auto-commit: build passed [$(date '+%Y-%m-%d %H:%M:%S')]\" && git push); fi",
+            "command": "node -e \"const chunks=[];process.stdin.on('data',c=>chunks.push(c));process.stdin.on('end',()=>{try{const d=JSON.parse(Buffer.concat(chunks));const cmd=d.tool_input&&d.tool_input.command||'';const code=d.tool_response&&d.tool_response.exitCode;if(/mvn\\s+(compile|test|package|install)/.test(cmd)&&code===0){const{execSync}=require('child_process');try{execSync('git add -A',{cwd:'D:/allCode/test/getFrients'});const diff=execSync('git diff --cached --name-only',{cwd:'D:/allCode/test/getFrients'}).toString().trim();if(diff){const ts=new Date().toISOString().replace('T',' ').slice(0,19);execSync('git commit -m \"Auto-commit: build passed ['+ts+']\"',{cwd:'D:/allCode/test/getFrients'});execSync('git push',{cwd:'D:/allCode/test/getFrients'});}}catch(e){}}}catch(e){}});\"",
             "timeout": 60,
             "statusMessage": "构建通过，自动提交到 Git..."
           }
